@@ -1425,7 +1425,7 @@ class FocusTraversalOrder extends InheritedWidget {
   static FocusOrder of(BuildContext context) {
     assert(context != null);
     final FocusTraversalOrder? marker = context.getElementForInheritedWidgetOfExactType<FocusTraversalOrder>()?.widget as FocusTraversalOrder?;
-    assert((){
+    assert(() {
       if (marker == null) {
         throw FlutterError(
           'FocusTraversalOrder.of() was called with a context that '
@@ -1508,7 +1508,7 @@ class FocusTraversalOrder extends InheritedWidget {
 ///   final T order;
 ///
 ///   @override
-///   _OrderedButtonState<T> createState() => _OrderedButtonState<T>();
+///   State<OrderedButton<T>> createState() => _OrderedButtonState<T>();
 /// }
 ///
 /// class _OrderedButtonState<T> extends State<OrderedButton<T>> {
@@ -1754,7 +1754,7 @@ class FocusTraversalGroup extends StatefulWidget {
   }
 
   @override
-  _FocusTraversalGroupState createState() => _FocusTraversalGroupState();
+  State<FocusTraversalGroup> createState() => _FocusTraversalGroupState();
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
